@@ -2,13 +2,14 @@ import { useState } from "react";
 import { z } from "zod";
 import { useTranslation } from "react-i18next";
 
-const getSchema = (t: any) => z.object({
-  name: z.string().trim().min(2, t("form.name_err")).max(100),
-  phone: z.string().trim().min(7, t("form.phone_err")).max(30),
-  date: z.string().min(1, t("form.date_err")),
-  guests: z.string(),
-  message: z.string().max(500).optional(),
-});
+const getSchema = (t: any) =>
+  z.object({
+    name: z.string().trim().min(2, t("form.name_err")).max(100),
+    phone: z.string().trim().min(7, t("form.phone_err")).max(30),
+    date: z.string().min(1, t("form.date_err")),
+    guests: z.string(),
+    message: z.string().max(500).optional(),
+  });
 
 const WHATSAPP_NUMBER = "905326954243";
 
@@ -87,9 +88,7 @@ export function ReservationForm({ tourTitle }: { tourTitle?: string }) {
       </div>
       {status === "err" && <p className="col-span-2 text-xs text-destructive">{error}</p>}
       {status === "ok" && (
-        <p className="col-span-2 text-xs text-emerald-700 bg-emerald-50 p-3">
-          {t("form.success")}
-        </p>
+        <p className="col-span-2 text-xs text-emerald-700 bg-emerald-50 p-3">{t("form.success")}</p>
       )}
       <button type="submit" className="col-span-2 mt-4 btn-primary">
         {t("form.submit")}

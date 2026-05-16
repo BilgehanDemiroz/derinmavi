@@ -12,7 +12,8 @@ const resources = {
       "home.eyebrow": "Ege'nin Ruhunu Keşfedin",
       "home.title_1": "Foça'da Unutulmaz",
       "home.title_2": "Tekne Turları",
-      "home.desc": "Ege'nin serin sularında, Foça'nın saklı koylarını keşfetmek ve denizin huzurunu sevdiklerinizle paylaşmak için size en uygun rotayı seçin.",
+      "home.desc":
+        "Ege'nin serin sularında, Foça'nın saklı koylarını keşfetmek ve denizin huzurunu sevdiklerinizle paylaşmak için size en uygun rotayı seçin.",
       "home.book": "Rezervasyon Yap",
       "home.explore": "Turları İncele",
       "home.scroll": "Keşfetmek için kaydır",
@@ -26,22 +27,27 @@ const resources = {
       "home.featured.title": "Özenle Seçilmiş Rotalar",
       "home.featured.all": "Tüm Turlar",
       "home.countdown.eyebrow": "Bugünkü Gün Batımı Turuna",
-      "home.countdown.desc": "Ege'nin altın saatlerinde unutulmaz bir deneyim. Gün batımının eşsiz renklerine tanık olun. Yerinizi ayırtmak için bize ulaşın.",
+      "home.countdown.desc":
+        "Ege'nin altın saatlerinde unutulmaz bir deneyim. Gün batımının eşsiz renklerine tanık olun. Yerinizi ayırtmak için bize ulaşın.",
       "home.countdown.book": "Yer Ayırt",
       "home.reservation.eyebrow": "Hızlı Rezervasyon",
       "home.reservation.title_1": "Kendi takviminizde",
       "home.reservation.title_2": "denize açılın.",
-      "home.reservation.desc": "Tarihinizi seçin, biz size en uygun tekneyi ve rotayı önerelim. 24 saat içinde dönüş yapıyoruz.",
+      "home.reservation.desc":
+        "Tarihinizi seçin, biz size en uygun tekneyi ve rotayı önerelim. 24 saat içinde dönüş yapıyoruz.",
       "tours.page.eyebrow": "Tüm Deneyimlerimiz",
       "tours.page.title": "Turlarımız",
-      "tours.page.desc": "Ege'nin serin sularında, Foça'nın saklı koylarını keşfetmek ve denizin huzurunu sevdiklerinizle paylaşmak için size en uygun rotayı seçin.",
+      "tours.page.desc":
+        "Ege'nin serin sularında, Foça'nın saklı koylarını keşfetmek ve denizin huzurunu sevdiklerinizle paylaşmak için size en uygun rotayı seçin.",
       "tours.category.daily": "Grup Turu",
       "tours.category.hourly": "Özel Kiralama",
       "tours.category.sunset": "Altın Saat",
       "tours.klasik.title": "Klasik Günlük Tekne Turu",
       "tours.klasik.duration": "7 Saat",
-      "tours.klasik.route": "Küçük Liman • Fener Adası • Orak Adası • Club Med • Kosova Plajı • Hayırsız Ada • Siren Kayalıkları",
-      "tours.klasik.description": "Foça'nın efsanevi koylarında geçen bir mavi yolculuk. Rota: Küçük Liman (Kalkış), Fener Adası, Orak Adası, Club Med, Kosova Plajı, Hayırsız Ada, Siren Kayalıkları, Küçük Liman (Varış). Geleneksel ahşap teknemizle yüzme molaları, yerel lezzetlerle hazırlanan öğle yemeği ve denizin sakinliği.",
+      "tours.klasik.route":
+        "Küçük Liman • Fener Adası • Orak Adası • Club Med • Kosova Plajı • Hayırsız Ada • Siren Kayalıkları",
+      "tours.klasik.description":
+        "Foça'nın efsanevi koylarında geçen bir mavi yolculuk. Rota: Küçük Liman (Kalkış), Fener Adası, Orak Adası, Club Med, Kosova Plajı, Hayırsız Ada, Siren Kayalıkları, Küçük Liman (Varış). Geleneksel ahşap teknemizle yüzme molaları, yerel lezzetlerle hazırlanan öğle yemeği ve denizin sakinliği.",
       "tours.klasik.inc.1": "Öğle yemeği",
       "tours.klasik.inc.2": "İçecekler",
       "tours.klasik.inc.3": "Yakıt",
@@ -60,8 +66,10 @@ const resources = {
       "tours.klasik.stop.8": "Küçük Liman (Varış)",
       "tours.private.title": "Özel Yat • Saatlik Kiralama",
       "tours.private.duration": "Saatlik",
-      "tours.private.route": "Küçük Liman • Beş Kapılar • Yat Limanı • Büyük Deniz • Fener Adası • Çanak Koyu • İncir Adası",
-      "tours.private.description": "Aileniz, sevdikleriniz veya iş arkadaşlarınızla size özel lüks yat deneyimi. Rotanızı siz belirleyin, geri kalanını biz halledelim.",
+      "tours.private.route":
+        "Küçük Liman • Beş Kapılar • Yat Limanı • Büyük Deniz • Fener Adası • Çanak Koyu • İncir Adası",
+      "tours.private.description":
+        "Aileniz, sevdikleriniz veya iş arkadaşlarınızla size özel lüks yat deneyimi. Rotanızı siz belirleyin, geri kalanını biz halledelim.",
       "tours.private.inc.1": "Profesyonel kaptan",
       "tours.private.inc.2": "İkramlık atıştırmalıklar",
       "tours.private.inc.3": "İçecekler",
@@ -87,7 +95,8 @@ const resources = {
       "tours.sunset.title": "Altın Saat • Gün Batımı Turu",
       "tours.sunset.duration": "2.5 Saat",
       "tours.sunset.route": "Foça açıkları • Adalar • Gün batımı durağı",
-      "tours.sunset.description": "Ege'nin eşsiz gün batımına şarap kadehi tutarken eşlik edin. Mevsimin en romantik turu, gurme meze tabağı ve seçilmiş yerel şaraplarla.",
+      "tours.sunset.description":
+        "Ege'nin eşsiz gün batımına şarap kadehi tutarken eşlik edin. Mevsimin en romantik turu, gurme meze tabağı ve seçilmiş yerel şaraplarla.",
       "tours.sunset.inc.1": "Şarap servisi",
       "tours.sunset.inc.2": "Gurme meze tabağı",
       "tours.sunset.inc.3": "Battaniye & yastıklar",
@@ -107,22 +116,29 @@ const resources = {
       "bays.siren.desc": "Odysseus'un büyülendiği efsane kayalar — derin mavi ve kuş sesleri.",
       "bays.incir.name": "İncir Adası",
       "bays.incir.subtitle": "Saklı çam kokulu koy",
-      "bays.incir.desc": "Kıyıdan ulaşılamayan, sadece denizden açılan beyaz çakıl tabanlı sığ koy.",
+      "bays.incir.desc":
+        "Kıyıdan ulaşılamayan, sadece denizden açılan beyaz çakıl tabanlı sığ koy.",
       "bays.orak.name": "Orak Adası",
       "bays.orak.subtitle": "Şeffaf su tüneli",
-      "bays.orak.desc": "Camdan bakar gibi netlikte su, kayalık koylar ve unutulmaz şnorkel rotası.",
+      "bays.orak.desc":
+        "Camdan bakar gibi netlikte su, kayalık koylar ve unutulmaz şnorkel rotası.",
       "faq.eyebrow": "Sık Sorulanlar",
       "faq.title": "Bilmek istedikleriniz.",
       "faq.q1": "Rezervasyon nasıl yapılır?",
-      "faq.a1": "Web sitemizdeki form, WhatsApp veya telefon yoluyla rezervasyon alıyoruz. Yer ayırtmak için ödemenin %30'u ön ödeme olarak alınır, kalanı tur günü teknede ödeyebilirsiniz.",
+      "faq.a1":
+        "Web sitemizdeki form, WhatsApp veya telefon yoluyla rezervasyon alıyoruz. Yer ayırtmak için ödemenin %30'u ön ödeme olarak alınır, kalanı tur günü teknede ödeyebilirsiniz.",
       "faq.q2": "Turlara çocuklar katılabilir mi?",
-      "faq.a2": "Evet, tüm günlük turlarımız çocuk dostudur. Bebekler ve küçük çocuklar için can yelekleri ve gölgelik alanlarımız mevcuttur.",
+      "faq.a2":
+        "Evet, tüm günlük turlarımız çocuk dostudur. Bebekler ve küçük çocuklar için can yelekleri ve gölgelik alanlarımız mevcuttur.",
       "faq.q3": "Yemek ve içecekler dahil mi?",
-      "faq.a3": "Klasik günlük turlarımızda öğle yemeği ve alkolsüz içecekler dahildir. Saatlik özel kiralamalarda atıştırmalık ve içecek paketleri ekleyebilirsiniz.",
+      "faq.a3":
+        "Klasik günlük turlarımızda öğle yemeği ve alkolsüz içecekler dahildir. Saatlik özel kiralamalarda atıştırmalık ve içecek paketleri ekleyebilirsiniz.",
       "faq.q4": "Kötü hava durumunda ne oluyor?",
-      "faq.a4": "Güvenliğiniz önceliğimiz. Olumsuz hava şartlarında turu ücretsiz olarak uygun başka bir tarihe erteleyebilir veya tam iade alabilirsiniz.",
+      "faq.a4":
+        "Güvenliğiniz önceliğimiz. Olumsuz hava şartlarında turu ücretsiz olarak uygun başka bir tarihe erteleyebilir veya tam iade alabilirsiniz.",
       "faq.q5": "Özel kutlama organize edebiliyor musunuz?",
-      "faq.a5": "Kesinlikle. Doğum günü, evlilik teklifi, yıldönümü gibi özel anlar için pasta, çiçek, müzik ve fotoğrafçı paketlerimiz mevcuttur.",
+      "faq.a5":
+        "Kesinlikle. Doğum günü, evlilik teklifi, yıldönümü gibi özel anlar için pasta, çiçek, müzik ve fotoğrafçı paketlerimiz mevcuttur.",
       "form.tour": "Tur",
       "form.name": "Ad Soyad",
       "form.name_err": "İsim çok kısa",
@@ -137,15 +153,18 @@ const resources = {
       "form.guests.4": "Özel grup",
       "form.message": "Mesaj (opsiyonel)",
       "form.submit": "Müsaitlik Sorgula",
-      "form.success": "WhatsApp mesajınız hazırlandı. Görüşmeyi açılan pencereden tamamlayabilirsiniz.",
+      "form.success":
+        "WhatsApp mesajınız hazırlandı. Görüşmeyi açılan pencereden tamamlayabilirsiniz.",
       "form.default_err": "Lütfen alanları kontrol edin",
       "about.header.eyebrow": "Hakkımızda",
       "about.header.title.1": "Foça'nın deniziyle",
       "about.header.title.2": "büyüyen bir aile.",
       "about.story.eyebrow": "Hikayemiz",
       "about.story.title": "On yılı aşkın deneyim, sayısız mavi anı.",
-      "about.story.p1": "Derin Mavi, üçüncü kuşak bir denizci ailenin kurduğu bir butik tekne işletmesidir. Kaptan Selim büyükbabasının tekneyle başladığı yolculuğu, bugün lüks filomuzla sürdürüyor.",
-      "about.story.p2": "Her tur, Foça'nın saklı koylarına duyduğumuz sevgiyle hazırlanır. İstediğimiz tek şey: denizden ayrılırken kalbinizde bir parça Ege bırakmak.",
+      "about.story.p1":
+        "Derin Mavi, üçüncü kuşak bir denizci ailenin kurduğu bir butik tekne işletmesidir. Kaptan Selim büyükbabasının tekneyle başladığı yolculuğu, bugün lüks filomuzla sürdürüyor.",
+      "about.story.p2":
+        "Her tur, Foça'nın saklı koylarına duyduğumuz sevgiyle hazırlanır. İstediğimiz tek şey: denizden ayrılırken kalbinizde bir parça Ege bırakmak.",
       "about.features.1.title": "Lisanslı Filo",
       "about.features.1.desc": "Tüm tekneler tam donanımlı, sigortalı ve lisanslıdır.",
       "about.features.2.title": "Deneyimli Kaptanlar",
@@ -166,7 +185,7 @@ const resources = {
       "contact.info.hours.value": "Hergün 08:00 — 22:00",
       "contact.form.title": "Rezervasyon talebi",
       "contact.form.desc": "Formu doldurun, en kısa sürede dönüş yapalım.",
-    }
+    },
   },
   en: {
     translation: {
@@ -178,36 +197,45 @@ const resources = {
       "home.eyebrow": "Experience The Aegean Spirit",
       "home.title_1": "Unforgettable",
       "home.title_2": "Boat Tours in Foça",
-      "home.desc": "Discover Foça's hidden bays in the cool waters of the Aegean and share the tranquility of the sea with your loved ones. Choose the route that suits you best.",
+      "home.desc":
+        "Discover Foça's hidden bays in the cool waters of the Aegean and share the tranquility of the sea with your loved ones. Choose the route that suits you best.",
       "home.book": "Book Now",
       "home.explore": "Explore Tours",
       "home.scroll": "Scroll to discover",
       "home.highlights.daily.title": "Daily Tours",
-      "home.highlights.daily.desc": "Group tours to Foça's legendary bays, every morning from the Marina.",
+      "home.highlights.daily.desc":
+        "Group tours to Foça's legendary bays, every morning from the Marina.",
       "home.highlights.hourly.title": "Private Hourly",
-      "home.highlights.hourly.desc": "A fully private luxury yacht for you, your family or friends.",
+      "home.highlights.hourly.desc":
+        "A fully private luxury yacht for you, your family or friends.",
       "home.highlights.sunset.title": "Sunset",
-      "home.highlights.sunset.desc": "Wine, meze and the Aegean's golden hour — limited availability.",
+      "home.highlights.sunset.desc":
+        "Wine, meze and the Aegean's golden hour — limited availability.",
       "home.featured.eyebrow": "Featured Experiences",
       "home.featured.title": "Curated Sea Journeys",
       "home.featured.all": "All Tours",
       "home.countdown.eyebrow": "Next Sunset Tour Starts In",
-      "home.countdown.desc": "An unforgettable experience during the Aegean's golden hours. Witness the unique colors of the sunset. Contact us to secure your spot.",
+      "home.countdown.desc":
+        "An unforgettable experience during the Aegean's golden hours. Witness the unique colors of the sunset. Contact us to secure your spot.",
       "home.countdown.book": "Book Now",
       "home.reservation.eyebrow": "Quick Reservation",
       "home.reservation.title_1": "Set sail on",
       "home.reservation.title_2": "your own schedule.",
-      "home.reservation.desc": "Choose your dates, and we'll recommend the best boat and route. We reply within 24 hours.",
+      "home.reservation.desc":
+        "Choose your dates, and we'll recommend the best boat and route. We reply within 24 hours.",
       "tours.page.eyebrow": "All Experiences",
       "tours.page.title": "Our Tours",
-      "tours.page.desc": "Discover Foça's hidden bays in the cool waters of the Aegean and share the tranquility of the sea with your loved ones. Choose the route that suits you best.",
+      "tours.page.desc":
+        "Discover Foça's hidden bays in the cool waters of the Aegean and share the tranquility of the sea with your loved ones. Choose the route that suits you best.",
       "tours.category.daily": "Group Sailing",
       "tours.category.hourly": "Private Charter",
       "tours.category.sunset": "Golden Hour",
       "tours.klasik.title": "Classic Daily Boat Tour",
       "tours.klasik.duration": "7 Hours",
-      "tours.klasik.route": "Küçük Liman • Fener Island • Orak Island • Club Med • Kosova Beach • Hayırsız Island • Siren Rocks",
-      "tours.klasik.description": "A blue voyage through Foça's legendary bays. Route: Küçük Liman (Departure), Fener Island, Orak Island, Club Med, Kosova Beach, Hayırsız Island, Siren Rocks, Küçük Liman (Arrival). Swimming breaks with our traditional wooden boat, lunch prepared with local flavors and the tranquility of the sea.",
+      "tours.klasik.route":
+        "Küçük Liman • Fener Island • Orak Island • Club Med • Kosova Beach • Hayırsız Island • Siren Rocks",
+      "tours.klasik.description":
+        "A blue voyage through Foça's legendary bays. Route: Küçük Liman (Departure), Fener Island, Orak Island, Club Med, Kosova Beach, Hayırsız Island, Siren Rocks, Küçük Liman (Arrival). Swimming breaks with our traditional wooden boat, lunch prepared with local flavors and the tranquility of the sea.",
       "tours.klasik.inc.1": "Lunch",
       "tours.klasik.inc.2": "Beverages",
       "tours.klasik.inc.3": "Fuel",
@@ -226,8 +254,10 @@ const resources = {
       "tours.klasik.stop.8": "Küçük Liman (Arrival)",
       "tours.private.title": "Private Yacht • Hourly Rental",
       "tours.private.duration": "Hourly",
-      "tours.private.route": "Küçük Liman • Beş Kapılar • Marina • Büyük Deniz • Fener Island • Çanak Bay • İncir Island",
-      "tours.private.description": "A private luxury yacht experience for you, your loved ones or colleagues. You set the route, we'll handle the rest.",
+      "tours.private.route":
+        "Küçük Liman • Beş Kapılar • Marina • Büyük Deniz • Fener Island • Çanak Bay • İncir Island",
+      "tours.private.description":
+        "A private luxury yacht experience for you, your loved ones or colleagues. You set the route, we'll handle the rest.",
       "tours.private.inc.1": "Professional captain",
       "tours.private.inc.2": "Complimentary snacks",
       "tours.private.inc.3": "Beverages",
@@ -253,7 +283,8 @@ const resources = {
       "tours.sunset.title": "Golden Hour • Sunset Tour",
       "tours.sunset.duration": "2.5 Hours",
       "tours.sunset.route": "Offshore Foça • Islands • Sunset stop",
-      "tours.sunset.description": "Accompany the unique sunset of the Aegean holding a glass of wine. The most romantic tour of the season, with a gourmet meze plate and selected local wines.",
+      "tours.sunset.description":
+        "Accompany the unique sunset of the Aegean holding a glass of wine. The most romantic tour of the season, with a gourmet meze plate and selected local wines.",
       "tours.sunset.inc.1": "Wine service",
       "tours.sunset.inc.2": "Gourmet meze plate",
       "tours.sunset.inc.3": "Blankets & pillows",
@@ -267,7 +298,8 @@ const resources = {
       "bays.eyebrow": "Foça Bays",
       "bays.title_1": "Hidden gems accessible",
       "bays.title_2": "only by sea.",
-      "bays.desc": "Three stops that have been on our route for years, and we admire them every time.",
+      "bays.desc":
+        "Three stops that have been on our route for years, and we admire them every time.",
       "bays.siren.name": "Siren Rocks",
       "bays.siren.subtitle": "The voice of mythology",
       "bays.siren.desc": "The legendary rocks that enchanted Odysseus — deep blue and bird sounds.",
@@ -276,19 +308,25 @@ const resources = {
       "bays.incir.desc": "A shallow bay with a white pebble bottom, accessible only from the sea.",
       "bays.orak.name": "Orak Island",
       "bays.orak.subtitle": "Transparent water tunnel",
-      "bays.orak.desc": "Water as clear as glass, rocky bays, and an unforgettable snorkeling route.",
+      "bays.orak.desc":
+        "Water as clear as glass, rocky bays, and an unforgettable snorkeling route.",
       "faq.eyebrow": "Frequently Asked Questions",
       "faq.title": "What you need to know.",
       "faq.q1": "How to make a reservation?",
-      "faq.a1": "We take reservations via the form on our website, WhatsApp, or phone. A 30% prepayment is required to secure your spot, and the rest can be paid on the boat on the day of the tour.",
+      "faq.a1":
+        "We take reservations via the form on our website, WhatsApp, or phone. A 30% prepayment is required to secure your spot, and the rest can be paid on the boat on the day of the tour.",
       "faq.q2": "Can children join the tours?",
-      "faq.a2": "Yes, all our daily tours are child-friendly. We have life jackets and shaded areas for babies and small children.",
+      "faq.a2":
+        "Yes, all our daily tours are child-friendly. We have life jackets and shaded areas for babies and small children.",
       "faq.q3": "Are food and drinks included?",
-      "faq.a3": "Lunch and non-alcoholic beverages are included in our classic daily tours. You can add snack and beverage packages to hourly private charters.",
+      "faq.a3":
+        "Lunch and non-alcoholic beverages are included in our classic daily tours. You can add snack and beverage packages to hourly private charters.",
       "faq.q4": "What happens in bad weather?",
-      "faq.a4": "Your safety is our priority. In case of adverse weather conditions, you can postpone the tour to another suitable date for free or get a full refund.",
+      "faq.a4":
+        "Your safety is our priority. In case of adverse weather conditions, you can postpone the tour to another suitable date for free or get a full refund.",
       "faq.q5": "Can you organize private celebrations?",
-      "faq.a5": "Absolutely. We have cake, flower, music, and photographer packages for special moments like birthdays, marriage proposals, and anniversaries.",
+      "faq.a5":
+        "Absolutely. We have cake, flower, music, and photographer packages for special moments like birthdays, marriage proposals, and anniversaries.",
       "form.tour": "Tour",
       "form.name": "Full Name",
       "form.name_err": "Name is too short",
@@ -303,19 +341,23 @@ const resources = {
       "form.guests.4": "Private group",
       "form.message": "Message (optional)",
       "form.submit": "Check Availability",
-      "form.success": "Your WhatsApp message is ready. You can complete the conversation from the opened window.",
+      "form.success":
+        "Your WhatsApp message is ready. You can complete the conversation from the opened window.",
       "form.default_err": "Please check the fields",
       "about.header.eyebrow": "About Us",
       "about.header.title.1": "Growing with",
       "about.header.title.2": "the sea of Foça.",
       "about.story.eyebrow": "Our Story",
       "about.story.title": "Over a decade of experience, countless blue memories.",
-      "about.story.p1": "Derin Mavi is a boutique boat company founded by a third-generation sailing family. Captain Selim continues the journey his grandfather started, now with our luxury fleet.",
-      "about.story.p2": "Every tour is prepared with our love for the hidden bays of Foça. All we want is to leave a piece of the Aegean in your heart when you leave the sea.",
+      "about.story.p1":
+        "Derin Mavi is a boutique boat company founded by a third-generation sailing family. Captain Selim continues the journey his grandfather started, now with our luxury fleet.",
+      "about.story.p2":
+        "Every tour is prepared with our love for the hidden bays of Foça. All we want is to leave a piece of the Aegean in your heart when you leave the sea.",
       "about.features.1.title": "Licensed Fleet",
       "about.features.1.desc": "All boats are fully equipped, insured, and licensed.",
       "about.features.2.title": "Experienced Captains",
-      "about.features.2.desc": "Professionals who know the local waters like the back of their hand.",
+      "about.features.2.desc":
+        "Professionals who know the local waters like the back of their hand.",
       "about.features.3.title": "Family Warmth",
       "about.features.3.desc": "Not a standard service, but personal hospitality.",
       "about.features.4.title": "Sustainability",
@@ -332,19 +374,17 @@ const resources = {
       "contact.info.hours.value": "Everyday 08:00 — 22:00",
       "contact.form.title": "Reservation Request",
       "contact.form.desc": "Fill out the form, and we'll get back to you shortly.",
-    }
-  }
+    },
+  },
 };
 
-i18n
-  .use(initReactI18next)
-  .init({
-    resources,
-    lng: "tr",
-    fallbackLng: "tr",
-    interpolation: {
-      escapeValue: false
-    }
-  });
+i18n.use(initReactI18next).init({
+  resources,
+  lng: "tr",
+  fallbackLng: "tr",
+  interpolation: {
+    escapeValue: false,
+  },
+});
 
 export default i18n;

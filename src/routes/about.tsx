@@ -46,9 +46,7 @@ function AboutPage() {
       <section className="py-24 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-start">
         <div>
           <span className="eyebrow text-gold mb-4 block">{t("about.story.eyebrow")}</span>
-          <h2 className="font-serif text-4xl italic mb-8">
-            {t("about.story.title")}
-          </h2>
+          <h2 className="font-serif text-4xl italic mb-8">{t("about.story.title")}</h2>
           <div className="space-y-5 text-foreground/75 leading-relaxed">
             <p>{t("about.story.p1")}</p>
             <p>{t("about.story.p2")}</p>

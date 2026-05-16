@@ -35,14 +35,25 @@ function ToursPage() {
         <h1 className="font-serif text-5xl md:text-7xl italic text-balance max-w-3xl">
           {t("tours.page.title")}
         </h1>
-        <p className="text-muted-foreground mt-6 max-w-xl">
-          {t("tours.page.desc")}
-        </p>
+        <p className="text-muted-foreground mt-6 max-w-xl">{t("tours.page.desc")}</p>
       </header>
 
-      <Section title={t("home.highlights.daily.title")} eyebrow={t("tours.category.daily")} tours={daily} />
-      <Section title={t("home.highlights.hourly.title")} eyebrow={t("tours.category.hourly")} tours={hourly} dark />
-      <Section title={t("home.highlights.sunset.title")} eyebrow={t("tours.category.sunset")} tours={sunset} />
+      <Section
+        title={t("home.highlights.daily.title")}
+        eyebrow={t("tours.category.daily")}
+        tours={daily}
+      />
+      <Section
+        title={t("home.highlights.hourly.title")}
+        eyebrow={t("tours.category.hourly")}
+        tours={hourly}
+        dark
+      />
+      <Section
+        title={t("home.highlights.sunset.title")}
+        eyebrow={t("tours.category.sunset")}
+        tours={sunset}
+      />
     </>
   );
 }

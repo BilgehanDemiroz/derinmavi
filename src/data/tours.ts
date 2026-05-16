@@ -33,13 +33,9 @@ export const tours: Tour[] = [
       "tours.klasik.inc.2",
       "tours.klasik.inc.3",
       "tours.klasik.inc.4",
-      "tours.klasik.inc.5"
+      "tours.klasik.inc.5",
     ],
-    highlights: [
-      "tours.klasik.hl.1",
-      "tours.klasik.hl.2",
-      "tours.klasik.hl.3"
-    ],
+    highlights: ["tours.klasik.hl.1", "tours.klasik.hl.2", "tours.klasik.hl.3"],
     stops: [
       "tours.klasik.stop.1",
       "tours.klasik.stop.2",
@@ -48,7 +44,7 @@ export const tours: Tour[] = [
       "tours.klasik.stop.5",
       "tours.klasik.stop.6",
       "tours.klasik.stop.7",
-      "tours.klasik.stop.8"
+      "tours.klasik.stop.8",
     ],
   },
   {
@@ -65,13 +61,9 @@ export const tours: Tour[] = [
       "tours.private.inc.1",
       "tours.private.inc.2",
       "tours.private.inc.3",
-      "tours.private.inc.4"
+      "tours.private.inc.4",
     ],
-    highlights: [
-      "tours.private.hl.1",
-      "tours.private.hl.2",
-      "tours.private.hl.3"
-    ],
+    highlights: ["tours.private.hl.1", "tours.private.hl.2", "tours.private.hl.3"],
     stops: [
       "tours.private.stop.1",
       "tours.private.stop.2",
@@ -87,7 +79,7 @@ export const tours: Tour[] = [
       "tours.private.stop.12",
       "tours.private.stop.13",
       "tours.private.stop.14",
-      "tours.private.stop.15"
+      "tours.private.stop.15",
     ],
   },
   {
@@ -104,18 +96,10 @@ export const tours: Tour[] = [
       "tours.sunset.inc.1",
       "tours.sunset.inc.2",
       "tours.sunset.inc.3",
-      "tours.sunset.inc.4"
+      "tours.sunset.inc.4",
     ],
-    highlights: [
-      "tours.sunset.hl.1",
-      "tours.sunset.hl.2",
-      "tours.sunset.hl.3"
-    ],
-    stops: [
-      "tours.sunset.stop.1",
-      "tours.sunset.stop.2",
-      "tours.sunset.stop.3"
-    ],
+    highlights: ["tours.sunset.hl.1", "tours.sunset.hl.2", "tours.sunset.hl.3"],
+    stops: ["tours.sunset.stop.1", "tours.sunset.stop.2", "tours.sunset.stop.3"],
   },
 ];
 

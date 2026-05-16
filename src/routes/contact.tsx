@@ -50,8 +50,16 @@ function ContactPage() {
               value: "+90 532 695 42 43",
               href: "tel:+905326954243",
             },
-            { icon: MapPin, label: t("contact.info.marina.label"), value: t("contact.info.marina.value") },
-            { icon: Clock, label: t("contact.info.hours.label"), value: t("contact.info.hours.value") },
+            {
+              icon: MapPin,
+              label: t("contact.info.marina.label"),
+              value: t("contact.info.marina.value"),
+            },
+            {
+              icon: Clock,
+              label: t("contact.info.hours.label"),
+              value: t("contact.info.hours.value"),
+            },
           ].map(({ icon: Icon, label, value, href, note }) => (
             <a key={label} href={href ?? "#"} className="flex gap-5 group">
               <span className="w-12 h-12 shrink-0 border border-border flex items-center justify-center group-hover:bg-gold group-hover:border-gold transition-colors">
@@ -70,9 +78,7 @@ function ContactPage() {
 
         <div className="lg:col-span-7 bg-card p-10 shadow-card">
           <h2 className="font-serif text-3xl italic mb-2">{t("contact.form.title")}</h2>
-          <p className="text-sm text-muted-foreground mb-8">
-            {t("contact.form.desc")}
-          </p>
+          <p className="text-sm text-muted-foreground mb-8">{t("contact.form.desc")}</p>
           <ReservationForm />
         </div>
       </section>

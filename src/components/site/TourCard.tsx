@@ -28,7 +28,6 @@ export function TourCard({ tour }: { tour: Tour }) {
         {t(tour.title)}
       </h3>
       <p className="text-xs uppercase tracking-wider text-muted-foreground mb-4">{t(tour.route)}</p>
-
     </Link>
   );
 }

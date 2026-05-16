@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 
 export function BaysSection() {
   const { t } = useTranslation();
-  
+
   const bays = [
     {
       name: t("bays.siren.name"),
@@ -37,9 +37,7 @@ export function BaysSection() {
             {t("bays.title_2")}
           </h2>
         </div>
-        <p className="text-sm text-muted-foreground max-w-sm">
-          {t("bays.desc")}
-        </p>
+        <p className="text-sm text-muted-foreground max-w-sm">{t("bays.desc")}</p>
       </div>
 
       <div className="grid md:grid-cols-3 gap-6">

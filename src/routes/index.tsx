@@ -87,7 +87,6 @@ function HomePage() {
           <div className="w-12 h-px bg-white/40" />
           <span className="text-[10px] uppercase tracking-[0.2em]">{t("home.scroll")}</span>
         </div>
-
       </section>
 
       {/* HIGHLIGHTS */}
@@ -178,9 +177,7 @@ function HomePage() {
             {t("home.reservation.title_1")} <br />
             {t("home.reservation.title_2")}
           </h2>
-          <p className="text-muted-foreground mb-10 max-w-md">
-            {t("home.reservation.desc")}
-          </p>
+          <p className="text-muted-foreground mb-10 max-w-md">{t("home.reservation.desc")}</p>
         </div>
 
         <div className="bg-card p-10 shadow-card">

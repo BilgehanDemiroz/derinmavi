@@ -63,7 +63,9 @@ function TourDetail() {
             <ArrowLeft size={14} /> Tüm Turlar
           </Link>
           <span className="eyebrow text-gold mb-3 block">{t(tour.categoryLabel)}</span>
-          <h1 className="font-serif text-4xl md:text-6xl italic mb-6 text-balance">{t(tour.title)}</h1>
+          <h1 className="font-serif text-4xl md:text-6xl italic mb-6 text-balance">
+            {t(tour.title)}
+          </h1>
           <div className="flex flex-wrap gap-6 text-xs uppercase tracking-widest text-muted-foreground mb-10">
             <span className="flex items-center gap-2">
               <Clock size={14} /> {t(tour.duration)}
@@ -84,7 +86,9 @@ function TourDetail() {
             {tour.stops && tour.stops.length > 0 && (
               <div className="lg:col-span-5 p-10 lg:p-12 flex flex-col justify-center bg-card">
                 <span className="eyebrow text-gold mb-3 block">Güzergah & Keşif Noktaları</span>
-                <h3 className="font-serif text-4xl mb-8 italic text-balance">Neler Göreceksiniz?</h3>
+                <h3 className="font-serif text-4xl mb-8 italic text-balance">
+                  Neler Göreceksiniz?
+                </h3>
                 <ul className="space-y-5">
                   {tour.stops.map((stop: string, i: number) => (
                     <li key={i} className="flex items-center gap-4 group">
@@ -140,7 +144,6 @@ function TourDetail() {
 
         <aside className="lg:col-span-5">
           <div className="lg:sticky lg:top-28 bg-card p-8 shadow-card">
-
             <ReservationForm tourTitle={tour.title} />
           </div>
         </aside>
