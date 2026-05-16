@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Clock, MapPin, Check, ArrowLeft } from "lucide-react";
 import { getTour, tours } from "@/data/tours";
 import { useTranslation } from "react-i18next";
+import i18nInstance from "@/i18n";
 import { ReservationForm } from "@/components/site/ReservationForm";
 
 export const Route = createFileRoute("/tours/$tourId")({
@@ -12,13 +13,14 @@ export const Route = createFileRoute("/tours/$tourId")({
   },
   head: ({ loaderData }) => {
     const tour = loaderData?.tour;
-    if (!tour) return { meta: [{ title: "Tur — Derin Mavi" }] };
+    const t = i18nInstance.t.bind(i18nInstance);
+    if (!tour) return { meta: [{ title: t("meta.tours.title") }] };
     return {
       meta: [
-        { title: `${tour.title} — Derin Mavi` },
-        { name: "description", content: tour.description },
-        { property: "og:title", content: tour.title },
-        { property: "og:description", content: tour.description },
+        { title: `${t(tour.title)} — Derin Mavi` },
+        { name: "description", content: t(tour.description) },
+        { property: "og:title", content: t(tour.title) },
+        { property: "og:description", content: t(tour.description) },
         { property: "og:image", content: tour.image },
       ],
     };

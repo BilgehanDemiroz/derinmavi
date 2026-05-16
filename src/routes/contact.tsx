@@ -2,11 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Phone, Mail, MapPin, MessageCircle, Clock } from "lucide-react";
 import { ReservationForm } from "@/components/site/ReservationForm";
 import { useTranslation } from "react-i18next";
-import i18n from "@/i18n";
+import i18nInstance from "@/i18n";
 
 export const Route = createFileRoute("/contact")({
   head: () => {
-    const { t } = i18n;
+    const t = i18nInstance.t.bind(i18nInstance);
     return {
       meta: [
         { title: t("meta.contact.title") },
