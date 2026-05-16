@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouter } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -17,8 +17,16 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
+  const router = useRouter();
   const toggleLanguage = () => {
-    i18n.changeLanguage(i18n.language === "tr" ? "en" : "tr");
+    const currentLang = i18n.language || "tr";
+    const nextLang = currentLang.startsWith("tr") ? "en" : "tr";
+    i18n.changeLanguage(nextLang).then(() => {
+      if (typeof window !== "undefined") {
+        localStorage.setItem("lang", nextLang);
+      }
+      router.invalidate();
+    });
   };
 
   useEffect(() => {
@@ -65,7 +73,7 @@ export function Navbar() {
               scrolled ? "border-foreground/20 text-foreground" : "border-white/30 text-white"
             }`}
           >
-            {i18n.language === "tr" ? "EN" : "TR"}
+            {(i18n.language || "tr").startsWith("tr") ? "EN" : "TR"}
           </button>
           <Link
             to="/contact"
@@ -98,6 +106,12 @@ export function Navbar() {
                 {t(l.labelKey)}
               </Link>
             ))}
+            <button
+              onClick={toggleLanguage}
+              className="text-left text-sm font-semibold uppercase tracking-widest text-foreground/80 hover:text-gold"
+            >
+              DİL DEĞİŞTİR: {(i18n.language || "tr").startsWith("tr") ? "EN" : "TR"}
+            </button>
           </div>
         </div>
       )}

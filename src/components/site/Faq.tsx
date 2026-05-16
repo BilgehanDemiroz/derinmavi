@@ -40,6 +40,7 @@ export function Faq() {
           return (
             <div key={f.q} className="border-b border-border">
               <button
+                type="button"
                 onClick={() => setOpen(isOpen ? null : i)}
                 className="w-full flex items-center justify-between gap-6 py-6 text-left group"
               >
@@ -51,13 +52,11 @@ export function Faq() {
                 </span>
               </button>
               <div
-                className={`grid transition-all duration-500 ease-out ${
-                  isOpen ? "grid-rows-[1fr] opacity-100 pb-6" : "grid-rows-[0fr] opacity-0"
+                className={`overflow-hidden transition-all duration-500 ease-out ${
+                  isOpen ? "max-h-96 opacity-100 pb-6" : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="overflow-hidden">
-                  <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">{f.a}</p>
-                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">{f.a}</p>
               </div>
             </div>
           );

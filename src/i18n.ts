@@ -205,10 +205,10 @@ const resources = {
         "Sistemlerimizde bir sorun oluştu. Sayfayı yenilemeyi deneyebilir veya ana sayfaya dönebilirsiniz.",
       "common.error.retry": "Tekrar Dene",
       "common.error.home": "Ana Sayfa",
-      "site.title": "Derin Mavi — Premium Tekne Turları & Özel Yat Kiralama",
+      "site.title": "Derin Mavi — Premium Tekne Turu",
       "site.desc":
         "Foça'da günlük tekne turları ve saatlik özel yat kiralama. Lisanslı kaptan, lüks filo, gün batımı turları.",
-      "meta.home.title": "Derin Mavi — Foça'da Premium Tekne Turları & Özel Yat",
+      "meta.home.title": "Derin Mavi — Foça'da Premium Tekne Turu",
       "meta.home.desc":
         "Foça İzmir'de günlük tekne turları, saatlik özel yat kiralama ve gün batımı turları. Lisanslı kaptan, lüks filo, kolay rezervasyon.",
       "meta.tours.title": "Turlar — Derin Mavi",
@@ -429,10 +429,10 @@ const resources = {
         "Something went wrong on our end. You can try refreshing or head back home.",
       "common.error.retry": "Try Again",
       "common.error.home": "Go Home",
-      "site.title": "Derin Mavi — Premium Boat Tours & Private Yacht Charter",
+      "site.title": "Derin Mavi — Premium Boat Tour",
       "site.desc":
         "Daily boat tours and hourly private yacht rentals in Foça. Licensed captain, luxury fleet, sunset tours.",
-      "meta.home.title": "Derin Mavi — Premium Boat Tours & Private Yachts in Foça",
+      "meta.home.title": "Derin Mavi — Premium Boat Tour in Foça",
       "meta.home.desc":
         "Daily boat tours, hourly private yacht rentals, and sunset tours in Foça, Izmir. Licensed captain, luxury fleet, easy booking.",
       "meta.tours.title": "Tours — Derin Mavi",
@@ -448,9 +448,11 @@ const resources = {
   },
 };
 
+const savedLang = typeof window !== "undefined" ? localStorage.getItem("lang") || "tr" : "tr";
+
 i18n.use(initReactI18next).init({
   resources,
-  lng: "tr",
+  lng: savedLang,
   fallbackLng: "tr",
   interpolation: {
     escapeValue: false,
