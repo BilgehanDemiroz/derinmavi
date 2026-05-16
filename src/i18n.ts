@@ -11,7 +11,7 @@ const resources = {
       "nav.reservation": "Rezervasyon",
       "home.eyebrow": "Ege'nin Ruhunu Keşfedin",
       "home.title_1": "Foça'da Unutulmaz",
-      "home.title_2": "Tekne Turları",
+      "home.title_2": "Tekne Turu",
       "home.desc":
         "Ege'nin serin sularında, Foça'nın saklı koylarını keşfetmek ve denizin huzurunu sevdiklerinizle paylaşmak için size en uygun rotayı seçin.",
       "home.book": "Rezervasyon Yap",
@@ -231,7 +231,7 @@ const resources = {
       "nav.reservation": "Reservation",
       "home.eyebrow": "Experience The Aegean Spirit",
       "home.title_1": "Unforgettable",
-      "home.title_2": "Boat Tours in Foça",
+      "home.title_2": "Boat Tour in Foça",
       "home.desc":
         "Discover Foça's hidden bays in the cool waters of the Aegean and share the tranquility of the sea with your loved ones. Choose the route that suits you best.",
       "home.book": "Book Now",
@@ -450,10 +450,13 @@ const resources = {
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: "tr",
+  lng: typeof window !== "undefined" ? localStorage.getItem("lang") || "tr" : "tr",
   fallbackLng: "tr",
   interpolation: {
     escapeValue: false,
+  },
+  react: {
+    useSuspense: false,
   },
 });
 

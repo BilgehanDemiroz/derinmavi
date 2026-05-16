@@ -73,7 +73,7 @@ export function Footer() {
 
       <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-widest text-background/40">
         <p>
-          © {new Date().getFullYear()} Derin Mavi Tekne Turları. {t("footer.rights")}
+          © {new Date().getFullYear()} Derin Mavi Tekne Turu. {t("footer.rights")}
         </p>
         <div className="flex gap-6">
           <span>{t("footer.privacy")}</span>
