@@ -2,18 +2,19 @@ import { useState } from "react";
 import { z } from "zod";
 import { useTranslation } from "react-i18next";
 
-const getSchema = (t: any) =>
-  z.object({
-    name: z.string().trim().min(2, t("form.name_err")).max(100),
-    phone: z.string().trim().min(7, t("form.phone_err")).max(30),
-    date: z.string().min(1, t("form.date_err")),
-    guests: z.string(),
-    message: z.string().max(500).optional(),
-  });
+const schema = z.object({
+  name: z.string().trim().min(2).max(100),
+  phone: z.string().trim().min(7).max(30),
+  date: z.string().min(1),
+  guests: z.string(),
+  message: z.string().max(500).optional(),
+});
+
+type ReservationData = z.infer<typeof schema>;
 
 const WHATSAPP_NUMBER = "905326954243";
 
-function createReservationMessage(data: z.infer<typeof schema>, tourTitle?: string) {
+function createReservationMessage(data: ReservationData, tourTitle?: string) {
   return [
     "Merhaba, rezervasyon müsaitliği sormak istiyorum.",
     tourTitle ? `Tur: ${tourTitle}` : null,
@@ -29,7 +30,6 @@ function createReservationMessage(data: z.infer<typeof schema>, tourTitle?: stri
 
 export function ReservationForm({ tourTitle }: { tourTitle?: string }) {
   const { t } = useTranslation();
-  const schema = getSchema(t);
   const [status, setStatus] = useState<"idle" | "ok" | "err">("idle");
   const [error, setError] = useState<string | null>(null);
 
@@ -37,9 +37,18 @@ export function ReservationForm({ tourTitle }: { tourTitle?: string }) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form));
+
+    // Dynamic error messages using safeParse but custom validation logic or localized error mapping
     const parsed = schema.safeParse(data);
     if (!parsed.success) {
-      setError(parsed.error.issues[0]?.message ?? t("form.default_err"));
+      const firstError = parsed.error.issues[0];
+      let msg = t("form.default_err");
+
+      if (firstError?.path[0] === "name") msg = t("form.name_err");
+      else if (firstError?.path[0] === "phone") msg = t("form.phone_err");
+      else if (firstError?.path[0] === "date") msg = t("form.date_err");
+
+      setError(msg);
       setStatus("err");
       return;
     }
