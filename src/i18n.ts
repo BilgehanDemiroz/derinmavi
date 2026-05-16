@@ -185,6 +185,41 @@ const resources = {
       "contact.info.hours.value": "Hergün 08:00 — 22:00",
       "contact.form.title": "Rezervasyon talebi",
       "contact.form.desc": "Formu doldurun, en kısa sürede dönüş yapalım.",
+      "footer.desc":
+        "Kuzey Ege'nin kalbinde, aile işletmesi premium deniz deneyimleri. On yılı aşkın deneyim, lisanslı tam donanımlı filo, yüzlerce mutlu konuk.",
+      "footer.exp": "Deneyim",
+      "footer.contact": "İletişim",
+      "footer.tours.daily": "Günlük Turlar",
+      "footer.tours.hourly": "Saatlik Kiralama",
+      "footer.tours.sunset": "Gün Batımı Turu",
+      "footer.tours.events": "Özel Kutlamalar",
+      "footer.privacy": "Gizlilik Politikası",
+      "footer.terms": "Kullanım Koşulları",
+      "footer.rights": "Tüm hakları saklıdır.",
+      "mobile.book": "Hemen Rezervasyon",
+      "common.404.subtitle": "Sayfa bulunamadı",
+      "common.404.desc": "Aradığınız sayfa mevcut değil veya taşınmış.",
+      "common.404.home": "Ana Sayfa",
+      "common.error.title": "Bu sayfa yüklenemedi",
+      "common.error.desc":
+        "Sistemlerimizde bir sorun oluştu. Sayfayı yenilemeyi deneyebilir veya ana sayfaya dönebilirsiniz.",
+      "common.error.retry": "Tekrar Dene",
+      "common.error.home": "Ana Sayfa",
+      "site.title": "Derin Mavi — Premium Tekne Turları & Özel Yat Kiralama",
+      "site.desc":
+        "Foça'da günlük tekne turları ve saatlik özel yat kiralama. Lisanslı kaptan, lüks filo, gün batımı turları.",
+      "meta.home.title": "Derin Mavi — Foça'da Premium Tekne Turları & Özel Yat",
+      "meta.home.desc":
+        "Foça İzmir'de günlük tekne turları, saatlik özel yat kiralama ve gün batımı turları. Lisanslı kaptan, lüks filo, kolay rezervasyon.",
+      "meta.tours.title": "Turlar — Derin Mavi",
+      "meta.tours.desc":
+        "Foça'da günlük tekne turları, saatlik özel yat kiralama ve gün batımı turları. Tüm seçeneklerimizi inceleyin.",
+      "meta.about.title": "Hakkımızda — Derin Mavi",
+      "meta.about.desc":
+        "Foça'nın deniziyle büyüyen aile işletmesi. 10+ yıllık deneyim, lisanslı kaptanlar, lüks bakımlı filo.",
+      "meta.contact.title": "İletişim & Rezervasyon — Derin Mavi",
+      "meta.contact.desc":
+        "Foça Marina'dan kalkan tekne turları için rezervasyon. WhatsApp ile hızlı yanıt ve telefon.",
     },
   },
   en: {
@@ -374,6 +409,41 @@ const resources = {
       "contact.info.hours.value": "Everyday 08:00 — 22:00",
       "contact.form.title": "Reservation Request",
       "contact.form.desc": "Fill out the form, and we'll get back to you shortly.",
+      "footer.desc":
+        "Premium sea experiences in the heart of the North Aegean, family-operated. Over a decade of experience, fully licensed fleet, hundreds of happy guests.",
+      "footer.exp": "Experience",
+      "footer.contact": "Contact",
+      "footer.tours.daily": "Daily Tours",
+      "footer.tours.hourly": "Hourly Rental",
+      "footer.tours.sunset": "Sunset Tour",
+      "footer.tours.events": "Private Celebrations",
+      "footer.privacy": "Privacy Policy",
+      "footer.terms": "Terms of Use",
+      "footer.rights": "All rights reserved.",
+      "mobile.book": "Book Now",
+      "common.404.subtitle": "Page not found",
+      "common.404.desc": "The page you're looking for doesn't exist or has been moved.",
+      "common.404.home": "Go Home",
+      "common.error.title": "This page didn't load",
+      "common.error.desc":
+        "Something went wrong on our end. You can try refreshing or head back home.",
+      "common.error.retry": "Try Again",
+      "common.error.home": "Go Home",
+      "site.title": "Derin Mavi — Premium Boat Tours & Private Yacht Charter",
+      "site.desc":
+        "Daily boat tours and hourly private yacht rentals in Foça. Licensed captain, luxury fleet, sunset tours.",
+      "meta.home.title": "Derin Mavi — Premium Boat Tours & Private Yachts in Foça",
+      "meta.home.desc":
+        "Daily boat tours, hourly private yacht rentals, and sunset tours in Foça, Izmir. Licensed captain, luxury fleet, easy booking.",
+      "meta.tours.title": "Tours — Derin Mavi",
+      "meta.tours.desc":
+        "Daily boat tours, hourly private yacht rentals, and sunset tours in Foça. Explore all our options.",
+      "meta.about.title": "About Us — Derin Mavi",
+      "meta.about.desc":
+        "Family-operated business growing with the sea of Foça. 10+ years experience, licensed captains, luxury fleet.",
+      "meta.contact.title": "Contact & Reservation — Derin Mavi",
+      "meta.contact.desc":
+        "Book boat tours departing from Foça Marina. Fast WhatsApp response and phone support.",
     },
   },
 };

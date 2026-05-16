@@ -3,21 +3,24 @@ import { Anchor, Award, Heart, Leaf } from "lucide-react";
 import harbor from "@/assets/foca-harbor.jpg";
 import privateImg from "@/assets/tour-private.jpg";
 import { useTranslation } from "react-i18next";
+import i18n from "@/i18n";
 
 export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "Hakkımızda — Derin Mavi" },
-      {
-        name: "description",
-        content:
-          "Foça'nın deniziyle büyüyen aile işletmesi. 10+ yıllık deneyim, lisanslı kaptanlar, lüks bakımlı filo.",
-      },
-      { property: "og:title", content: "Hakkımızda — Derin Mavi" },
-      { property: "og:description", content: "Foça'da on yılı aşkın bir aile geleneği." },
-      { property: "og:image", content: harbor },
-    ],
-  }),
+  head: () => {
+    const { t } = i18n;
+    return {
+      meta: [
+        { title: t("meta.about.title") },
+        {
+          name: "description",
+          content: t("meta.about.desc"),
+        },
+        { property: "og:title", content: t("meta.about.title") },
+        { property: "og:description", content: t("meta.about.desc") },
+        { property: "og:image", content: harbor },
+      ],
+    };
+  },
   component: AboutPage,
 });
 

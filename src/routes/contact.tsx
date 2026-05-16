@@ -2,23 +2,26 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Phone, Mail, MapPin, MessageCircle, Clock } from "lucide-react";
 import { ReservationForm } from "@/components/site/ReservationForm";
 import { useTranslation } from "react-i18next";
+import i18n from "@/i18n";
 
 export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "İletişim & Rezervasyon — Derin Mavi" },
-      {
-        name: "description",
-        content:
-          "Foça Marina'dan kalkan tekne turları için rezervasyon. WhatsApp ile hızlı yanıt ve telefon.",
-      },
-      { property: "og:title", content: "Rezervasyon — Derin Mavi" },
-      {
-        property: "og:description",
-        content: "Tekne turunuz için bize ulaşın. WhatsApp, telefon ve form ile kolay rezervasyon.",
-      },
-    ],
-  }),
+  head: () => {
+    const { t } = i18n;
+    return {
+      meta: [
+        { title: t("meta.contact.title") },
+        {
+          name: "description",
+          content: t("meta.contact.desc"),
+        },
+        { property: "og:title", content: t("meta.contact.title") },
+        {
+          property: "og:description",
+          content: t("meta.contact.desc"),
+        },
+      ],
+    };
+  },
   component: ContactPage,
 });
 

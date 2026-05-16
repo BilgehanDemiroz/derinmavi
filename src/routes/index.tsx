@@ -8,18 +8,21 @@ import { ReservationForm } from "@/components/site/ReservationForm";
 import { BaysSection } from "@/components/site/BaysSection";
 import { Faq } from "@/components/site/Faq";
 import { useTranslation } from "react-i18next";
+import i18n from "@/i18n";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Derin Mavi — Foça'da Premium Tekne Turları & Özel Yat" },
-      {
-        name: "description",
-        content:
-          "Foça İzmir'de günlük tekne turları, saatlik özel yat kiralama ve gün batımı turları. Lisanslı kaptan, lüks filo, kolay rezervasyon.",
-      },
-    ],
-  }),
+  head: () => {
+    const { t } = i18n;
+    return {
+      meta: [
+        { title: t("meta.home.title") },
+        {
+          name: "description",
+          content: t("meta.home.desc"),
+        },
+      ],
+    };
+  },
   component: HomePage,
 });
 

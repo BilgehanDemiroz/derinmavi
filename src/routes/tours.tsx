@@ -2,23 +2,26 @@ import { createFileRoute } from "@tanstack/react-router";
 import { tours } from "@/data/tours";
 import { TourCard } from "@/components/site/TourCard";
 import { useTranslation } from "react-i18next";
+import i18n from "@/i18n";
 
 export const Route = createFileRoute("/tours")({
-  head: () => ({
-    meta: [
-      { title: "Turlar — Derin Mavi" },
-      {
-        name: "description",
-        content:
-          "Foça'da günlük tekne turları, saatlik özel yat kiralama ve gün batımı turları. Tüm seçeneklerimizi inceleyin.",
-      },
-      { property: "og:title", content: "Tüm Turlarımız — Derin Mavi" },
-      {
-        property: "og:description",
-        content: "Günlük turlar, saatlik özel kiralama ve gün batımı deneyimleri.",
-      },
-    ],
-  }),
+  head: () => {
+    const { t } = i18n;
+    return {
+      meta: [
+        { title: t("meta.tours.title") },
+        {
+          name: "description",
+          content: t("meta.tours.desc"),
+        },
+        { property: "og:title", content: t("meta.tours.title") },
+        {
+          property: "og:description",
+          content: t("meta.tours.desc"),
+        },
+      ],
+    };
+  },
   component: ToursPage,
 });
 
