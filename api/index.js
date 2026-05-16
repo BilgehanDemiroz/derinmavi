@@ -1,5 +1,4 @@
 import server from '../dist/server/server.js';
+import { toNodeHandler } from 'srvx/node';
 
-export default async function handler(request) {
-  return await server.fetch(request);
-}
+export default toNodeHandler(server.fetch);
