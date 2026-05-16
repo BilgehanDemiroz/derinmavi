@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -139,14 +139,14 @@ function RootComponent() {
   const path = router.state.location.pathname;
   const isHome = path === "/";
 
+  const [mounted, setMounted] = useState(false);
   useEffect(() => {
+    setMounted(true);
     const savedLang = localStorage.getItem("lang");
     if (savedLang && savedLang !== i18n.language) {
-      i18n.changeLanguage(savedLang).then(() => {
-        router.invalidate();
-      });
+      i18n.changeLanguage(savedLang);
     }
-  }, [i18n, router]);
+  }, [i18n]);
 
   return (
     <QueryClientProvider client={queryClient}>

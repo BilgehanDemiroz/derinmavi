@@ -21,12 +21,11 @@ export function Navbar() {
   const toggleLanguage = () => {
     const currentLang = i18n.language || "tr";
     const nextLang = currentLang.startsWith("tr") ? "en" : "tr";
-    i18n.changeLanguage(nextLang).then(() => {
-      if (typeof window !== "undefined") {
-        localStorage.setItem("lang", nextLang);
-      }
-      router.invalidate();
-    });
+    i18n.changeLanguage(nextLang);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("lang", nextLang);
+    }
+    router.invalidate();
   };
 
   useEffect(() => {
