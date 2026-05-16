@@ -9,7 +9,6 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
-import favicon from "../assets/favicon.png?url";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppButton } from "@/components/site/WhatsAppButton";
@@ -102,11 +101,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "icon",
         type: "image/png",
-        href: `${favicon}?v=2`,
+        href: "/favicon.png?v=3",
       },
       {
         rel: "shortcut icon",
-        href: `${favicon}?v=2`,
+        href: "/favicon.png?v=3",
       },
     ],
   }),
