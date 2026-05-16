@@ -8,13 +8,13 @@ export const Route = createFileRoute("/contact")({
   head: () => {
     const t = i18nInstance.t.bind(i18nInstance);
     return {
-      title: t("meta.contact.title"),
       meta: [
+        { title: "İletişim - Derin Mavi" },
         {
           name: "description",
           content: t("meta.contact.desc"),
         },
-        { property: "og:title", content: t("meta.contact.title") },
+        { property: "og:title", content: "İletişim - Derin Mavi" },
         {
           property: "og:description",
           content: t("meta.contact.desc"),

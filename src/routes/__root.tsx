@@ -76,16 +76,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   head: () => {
     const t = i18nInstance.t.bind(i18nInstance);
     return {
-      title: t("site.title"),
       meta: [
         { charSet: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
+        { title: "Derin Mavi - Premium Tekne Turu" },
         {
           name: "description",
           content: t("site.desc"),
         },
         { name: "author", content: "Derin Mavi" },
-        { property: "og:title", content: t("site.title") },
+        { property: "og:title", content: "Derin Mavi - Premium Tekne Turu" },
         {
           property: "og:description",
           content: t("site.desc"),
@@ -102,11 +102,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         {
           rel: "icon",
           type: "image/png",
-          href: "/favicon.png?v=4",
+          href: "/favicon.png",
         },
         {
           rel: "shortcut icon",
-          href: "/favicon.png?v=4",
+          href: "/favicon.png",
         },
       ],
     };
@@ -120,7 +120,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 function RootShell({ children }: { children: React.ReactNode }) {
   const { i18n } = useTranslation();
   return (
-    <html lang={i18n.language}>
+    <html lang={i18n.language} suppressHydrationWarning>
       <head>
         <HeadContent />
       </head>

@@ -14,8 +14,8 @@ export const Route = createFileRoute("/")({
   head: () => {
     const t = i18nInstance.t.bind(i18nInstance);
     return {
-      title: t("meta.home.title"),
       meta: [
+        { title: "Derin Mavi - Foça'da Premium Tekne Turu" },
         {
           name: "description",
           content: t("meta.home.desc"),

@@ -8,13 +8,13 @@ export const Route = createFileRoute("/tours")({
   head: () => {
     const t = i18nInstance.t.bind(i18nInstance);
     return {
-      title: t("meta.tours.title"),
       meta: [
+        { title: "Turlar - Derin Mavi" },
         {
           name: "description",
           content: t("meta.tours.desc"),
         },
-        { property: "og:title", content: t("meta.tours.title") },
+        { property: "og:title", content: "Turlar - Derin Mavi" },
         {
           property: "og:description",
           content: t("meta.tours.desc"),

@@ -15,10 +15,10 @@ export const Route = createFileRoute("/tours/$tourId")({
     const tour = loaderData?.tour;
     const t = i18nInstance.t.bind(i18nInstance);
     return {
-      title: tour ? `${t(tour.title)} — Derin Mavi` : t("meta.tours.title"),
       meta: [
+        { title: tour ? `${t(tour.title)} - Derin Mavi` : "Turlar - Derin Mavi" },
         { name: "description", content: tour ? t(tour.description) : t("meta.tours.desc") },
-        { property: "og:title", content: tour ? t(tour.title) : t("meta.tours.title") },
+        { property: "og:title", content: tour ? t(tour.title) : "Turlar - Derin Mavi" },
         { property: "og:description", content: tour ? t(tour.description) : t("meta.tours.desc") },
         { property: "og:image", content: tour?.image },
       ],

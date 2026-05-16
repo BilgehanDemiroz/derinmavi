@@ -9,13 +9,13 @@ export const Route = createFileRoute("/about")({
   head: () => {
     const t = i18nInstance.t.bind(i18nInstance);
     return {
-      title: t("meta.about.title"),
       meta: [
+        { title: "Hakkımızda - Derin Mavi" },
         {
           name: "description",
           content: t("meta.about.desc"),
         },
-        { property: "og:title", content: t("meta.about.title") },
+        { property: "og:title", content: "Hakkımızda - Derin Mavi" },
         { property: "og:description", content: t("meta.about.desc") },
         { property: "og:image", content: harbor },
       ],
