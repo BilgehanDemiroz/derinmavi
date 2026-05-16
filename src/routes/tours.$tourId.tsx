@@ -14,14 +14,13 @@ export const Route = createFileRoute("/tours/$tourId")({
   head: ({ loaderData }) => {
     const tour = loaderData?.tour;
     const t = i18nInstance.t.bind(i18nInstance);
-    if (!tour) return { meta: [{ title: t("meta.tours.title") }] };
     return {
+      title: tour ? `${t(tour.title)} — Derin Mavi` : t("meta.tours.title"),
       meta: [
-        { title: `${t(tour.title)} — Derin Mavi` },
-        { name: "description", content: t(tour.description) },
-        { property: "og:title", content: t(tour.title) },
-        { property: "og:description", content: t(tour.description) },
-        { property: "og:image", content: tour.image },
+        { name: "description", content: tour ? t(tour.description) : t("meta.tours.desc") },
+        { property: "og:title", content: tour ? t(tour.title) : t("meta.tours.title") },
+        { property: "og:description", content: tour ? t(tour.description) : t("meta.tours.desc") },
+        { property: "og:image", content: tour?.image },
       ],
     };
   },

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -75,10 +76,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   head: () => {
     const t = i18nInstance.t.bind(i18nInstance);
     return {
+      title: t("site.title"),
       meta: [
         { charSet: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { title: t("site.title") },
         {
           name: "description",
           content: t("site.desc"),
@@ -101,11 +102,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         {
           rel: "icon",
           type: "image/png",
-          href: "/favicon.png?v=3",
+          href: "/favicon.png?v=4",
         },
         {
           rel: "shortcut icon",
-          href: "/favicon.png?v=3",
+          href: "/favicon.png?v=4",
         },
       ],
     };
@@ -133,11 +134,19 @@ function RootShell({ children }: { children: React.ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const { i18n } = useTranslation();
   const router = useRouter();
   const path = router.state.location.pathname;
-  const hideChrome = false; // future: auth screens
-  void hideChrome;
   const isHome = path === "/";
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem("lang");
+    if (savedLang && savedLang !== i18n.language) {
+      i18n.changeLanguage(savedLang).then(() => {
+        router.invalidate();
+      });
+    }
+  }, [i18n, router]);
 
   return (
     <QueryClientProvider client={queryClient}>

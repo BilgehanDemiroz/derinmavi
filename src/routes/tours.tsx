@@ -8,8 +8,8 @@ export const Route = createFileRoute("/tours")({
   head: () => {
     const t = i18nInstance.t.bind(i18nInstance);
     return {
+      title: t("meta.tours.title"),
       meta: [
-        { title: t("meta.tours.title") },
         {
           name: "description",
           content: t("meta.tours.desc"),

@@ -14,8 +14,8 @@ export const Route = createFileRoute("/")({
   head: () => {
     const t = i18nInstance.t.bind(i18nInstance);
     return {
+      title: t("meta.home.title"),
       meta: [
-        { title: t("meta.home.title") },
         {
           name: "description",
           content: t("meta.home.desc"),

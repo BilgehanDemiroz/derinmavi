@@ -9,8 +9,8 @@ export const Route = createFileRoute("/about")({
   head: () => {
     const t = i18nInstance.t.bind(i18nInstance);
     return {
+      title: t("meta.about.title"),
       meta: [
-        { title: t("meta.about.title") },
         {
           name: "description",
           content: t("meta.about.desc"),

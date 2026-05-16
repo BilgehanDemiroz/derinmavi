@@ -448,11 +448,9 @@ const resources = {
   },
 };
 
-const savedLang = typeof window !== "undefined" ? localStorage.getItem("lang") || "tr" : "tr";
-
 i18n.use(initReactI18next).init({
   resources,
-  lng: savedLang,
+  lng: "tr",
   fallbackLng: "tr",
   interpolation: {
     escapeValue: false,
