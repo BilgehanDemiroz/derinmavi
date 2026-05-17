@@ -62,10 +62,10 @@ export function Footer() {
               <MapPin size={14} className="mt-0.5 shrink-0" /> {t("contact.info.marina.value")}
             </li>
             <li className="flex gap-2">
-              <Phone size={14} className="mt-0.5 shrink-0" /> +90 532 695 42 43
+              <Phone size={14} className="mt-0.5 shrink-0" /> +90 533 899 01 02
             </li>
             <li className="flex gap-2">
-              <Mail size={14} className="mt-0.5 shrink-0" /> bilgehandemiroz7@gmail.com
+              <Mail size={14} className="mt-0.5 shrink-0" /> focaderinmavi@gmail.com
             </li>
           </ul>
         </div>

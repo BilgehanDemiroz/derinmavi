@@ -1,6 +1,7 @@
 import { Link, useRouter } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import logoImg from "@/assets/logo.png";
 
 import { useTranslation } from "react-i18next";
 import "@/i18n"; // Ensure i18n is initialized
@@ -43,9 +44,16 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <Link
           to="/"
-          className={`font-serif italic text-2xl font-bold tracking-tight ${scrolled ? "text-foreground" : "text-white"}`}
+          className={`flex items-center gap-3 font-serif italic text-2xl font-bold tracking-tight ${scrolled ? "text-foreground" : "text-white"}`}
         >
-          Derin <span className="text-gold">Mavi</span>
+          <img
+            src={logoImg}
+            alt="Derin Mavi Logo"
+            className="w-10 h-10 object-contain"
+          />
+          <span>
+            Derin <span className="text-gold">Mavi</span>
+          </span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8">

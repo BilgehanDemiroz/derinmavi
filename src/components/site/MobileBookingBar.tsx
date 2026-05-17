@@ -8,7 +8,7 @@ export function MobileBookingBar() {
   return (
     <div className="md:hidden fixed bottom-0 left-0 right-0 z-30 bg-foreground/95 backdrop-blur text-background border-t border-background/10 p-3 flex gap-2">
       <a
-        href="tel:+905326954243"
+        href="tel:+905338990102"
         aria-label="Telefon"
         className="flex items-center justify-center w-12 h-12 border border-background/20"
       >

@@ -12,7 +12,7 @@ const schema = z.object({
 
 type ReservationData = z.infer<typeof schema>;
 
-const WHATSAPP_NUMBER = "905326954243";
+const WHATSAPP_NUMBER = "905338990102";
 
 function createReservationMessage(data: ReservationData, tourTitle?: string) {
   return [

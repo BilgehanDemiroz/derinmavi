@@ -43,15 +43,15 @@ function ContactPage() {
             {
               icon: MessageCircle,
               label: t("contact.info.whatsapp.label"),
-              value: "+90 532 695 42 43",
-              href: "https://wa.me/905326954243",
+              value: "+90 533 899 01 02",
+              href: "https://wa.me/905338990102",
               note: t("contact.info.whatsapp.note"),
             },
             {
               icon: Phone,
               label: t("contact.info.phone.label"),
-              value: "+90 532 695 42 43",
-              href: "tel:+905326954243",
+              value: "+90 533 899 01 02",
+              href: "tel:+905338990102",
             },
             {
               icon: MapPin,
