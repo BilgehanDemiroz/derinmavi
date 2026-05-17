@@ -450,7 +450,7 @@ const resources = {
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: "tr",
+  lng: typeof window !== "undefined" ? localStorage.getItem("lang") || "tr" : "tr",
   fallbackLng: "tr",
   interpolation: {
     escapeValue: false,

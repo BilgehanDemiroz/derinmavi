@@ -1,18 +1,21 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
   Link,
   createRootRouteWithContext,
   useRouter,
+  HeadContent,
+  Scripts,
 } from "@tanstack/react-router";
 
+import appCss from "../styles.css?url";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppButton } from "@/components/site/WhatsAppButton";
 import { MobileBookingBar } from "@/components/site/MobileBookingBar";
 import { useTranslation } from "react-i18next";
-import "@/i18n";
+import i18nInstance from "@/i18n";
 
 function NotFoundComponent() {
   const { t } = useTranslation();
@@ -49,7 +52,6 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
         <p className="mt-2 text-sm text-muted-foreground">{t("common.error.desc")}</p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
-            type="button"
             onClick={() => {
               router.invalidate();
               reset();
@@ -71,10 +73,64 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+  head: () => {
+    const t = i18nInstance.t.bind(i18nInstance);
+    return {
+      meta: [
+        { charSet: "utf-8" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        { title: "Derin Mavi - Premium Tekne Turu" },
+        {
+          name: "description",
+          content: t("site.desc"),
+        },
+        { name: "author", content: "Derin Mavi" },
+        { property: "og:title", content: "Derin Mavi - Premium Tekne Turu" },
+        {
+          property: "og:description",
+          content: t("site.desc"),
+        },
+        { property: "og:type", content: "website" },
+        { name: "twitter:card", content: "summary" },
+        { name: "twitter:site", content: "@derinmavi" },
+      ],
+      links: [
+        {
+          rel: "stylesheet",
+          href: appCss,
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          href: "/favicon.png",
+        },
+        {
+          rel: "shortcut icon",
+          href: "/favicon.png",
+        },
+      ],
+    };
+  },
+  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
+
+function RootShell({ children }: { children: React.ReactNode }) {
+  const { i18n } = useTranslation();
+  return (
+    <html lang={i18n.language} suppressHydrationWarning>
+      <head>
+        <HeadContent />
+      </head>
+      <body>
+        {children}
+        <Scripts />
+      </body>
+    </html>
+  );
+}
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
@@ -83,12 +139,14 @@ function RootComponent() {
   const path = router.state.location.pathname;
   const isHome = path === "/";
 
+  const [mounted, setMounted] = useState(false);
   useEffect(() => {
+    setMounted(true);
     const savedLang = localStorage.getItem("lang");
     if (savedLang && savedLang !== i18n.language) {
       i18n.changeLanguage(savedLang);
     }
-  }, []);
+  }, [i18n]);
 
   return (
     <QueryClientProvider client={queryClient}>

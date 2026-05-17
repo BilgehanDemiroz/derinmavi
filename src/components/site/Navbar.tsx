@@ -1,8 +1,9 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouter } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+
 import { useTranslation } from "react-i18next";
-import "@/i18n";
+import "@/i18n"; // Ensure i18n is initialized
 
 const links = [
   { to: "/", labelKey: "nav.home" },
@@ -16,13 +17,15 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
+  const router = useRouter();
   const toggleLanguage = () => {
     const currentLang = i18n.language || "tr";
     const nextLang = currentLang.startsWith("tr") ? "en" : "tr";
     i18n.changeLanguage(nextLang);
-    localStorage.setItem("lang", nextLang);
-    // Force re-render by updating the document lang attribute
-    document.documentElement.lang = nextLang;
+    if (typeof window !== "undefined") {
+      localStorage.setItem("lang", nextLang);
+    }
+    router.invalidate();
   };
 
   useEffect(() => {
@@ -31,8 +34,6 @@ export function Navbar() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  const currentLang = i18n.language || "tr";
 
   return (
     <nav
@@ -66,13 +67,12 @@ export function Navbar() {
 
         <div className="flex items-center gap-3">
           <button
-            type="button"
             onClick={toggleLanguage}
-            className={`hidden sm:inline-block text-[10px] font-bold uppercase tracking-widest border px-2 py-1 hover:bg-gold hover:border-gold transition-colors cursor-pointer ${
+            className={`hidden sm:inline-block text-[10px] font-bold uppercase tracking-widest border px-2 py-1 hover:bg-gold hover:border-gold transition-colors ${
               scrolled ? "border-foreground/20 text-foreground" : "border-white/30 text-white"
             }`}
           >
-            {currentLang.startsWith("tr") ? "EN" : "TR"}
+            {(i18n.language || "tr").startsWith("tr") ? "EN" : "TR"}
           </button>
           <Link
             to="/contact"
@@ -81,7 +81,6 @@ export function Navbar() {
             {t("nav.reservation")}
           </Link>
           <button
-            type="button"
             onClick={() => setOpen((v) => !v)}
             aria-label="Menu"
             className={`md:hidden p-2 ${scrolled ? "text-foreground" : "text-white"}`}
@@ -107,11 +106,10 @@ export function Navbar() {
               </Link>
             ))}
             <button
-              type="button"
-              onClick={() => { toggleLanguage(); setOpen(false); }}
-              className="text-left text-sm font-semibold uppercase tracking-widest text-foreground/80 hover:text-gold cursor-pointer"
+              onClick={toggleLanguage}
+              className="text-left text-sm font-semibold uppercase tracking-widest text-foreground/80 hover:text-gold"
             >
-              DİL DEĞİŞTİR: {currentLang.startsWith("tr") ? "EN" : "TR"}
+              DİL DEĞİŞTİR: {(i18n.language || "tr").startsWith("tr") ? "EN" : "TR"}
             </button>
           </div>
         </div>

@@ -8,11 +8,23 @@ import { ReservationForm } from "@/components/site/ReservationForm";
 import { BaysSection } from "@/components/site/BaysSection";
 import { Faq } from "@/components/site/Faq";
 import { useTranslation } from "react-i18next";
+import i18nInstance from "@/i18n";
 
 export const Route = createFileRoute("/")({
+  head: () => {
+    const t = i18nInstance.t.bind(i18nInstance);
+    return {
+      meta: [
+        { title: "Derin Mavi - Foça'da Premium Tekne Turu" },
+        {
+          name: "description",
+          content: t("meta.home.desc"),
+        },
+      ],
+    };
+  },
   component: HomePage,
 });
-
 
 function useSunsetCountdown() {
   const [str, setStr] = useState("");

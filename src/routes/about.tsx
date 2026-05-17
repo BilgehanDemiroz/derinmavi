@@ -3,8 +3,24 @@ import { Anchor, Award, Heart, Leaf } from "lucide-react";
 import harbor from "@/assets/foca-harbor.jpg";
 import privateImg from "@/assets/tour-private.jpg";
 import { useTranslation } from "react-i18next";
+import i18nInstance from "@/i18n";
 
 export const Route = createFileRoute("/about")({
+  head: () => {
+    const t = i18nInstance.t.bind(i18nInstance);
+    return {
+      meta: [
+        { title: "Hakkımızda - Derin Mavi" },
+        {
+          name: "description",
+          content: t("meta.about.desc"),
+        },
+        { property: "og:title", content: "Hakkımızda - Derin Mavi" },
+        { property: "og:description", content: t("meta.about.desc") },
+        { property: "og:image", content: harbor },
+      ],
+    };
+  },
   component: AboutPage,
 });
 
