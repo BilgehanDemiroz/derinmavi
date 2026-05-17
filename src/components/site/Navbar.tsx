@@ -17,7 +17,6 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
-  const router = useRouter();
   const toggleLanguage = () => {
     const currentLang = i18n.language || "tr";
     const nextLang = currentLang.startsWith("tr") ? "en" : "tr";
@@ -25,7 +24,7 @@ export function Navbar() {
     if (typeof window !== "undefined") {
       localStorage.setItem("lang", nextLang);
     }
-    router.invalidate();
+    // router.invalidate() kaldırıldı — i18n değişikliği zaten re-render tetikler
   };
 
   useEffect(() => {

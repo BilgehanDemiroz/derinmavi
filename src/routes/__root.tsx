@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
@@ -139,13 +140,25 @@ function RootComponent() {
   const path = router.state.location.pathname;
   const isHome = path === "/";
 
-  const [mounted, setMounted] = useState(false);
+  // Dil değişiminde re-render tetiklemek için state
+  const [, setLang] = useState(i18n.language);
+
   useEffect(() => {
-    setMounted(true);
+    // Sayfa açılışında localStorage'dan dili oku
     const savedLang = localStorage.getItem("lang");
     if (savedLang && savedLang !== i18n.language) {
       i18n.changeLanguage(savedLang);
     }
+
+    // Dil değiştiğinde component'i yeniden render et
+    const handleLangChange = (lng: string) => {
+      setLang(lng);
+    };
+
+    i18n.on("languageChanged", handleLangChange);
+    return () => {
+      i18n.off("languageChanged", handleLangChange);
+    };
   }, [i18n]);
 
   return (
