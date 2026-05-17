@@ -5,6 +5,9 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [tanstackStart(), tailwindcss(), tsconfigPaths()],
+  esbuild: {
+    jsx: "automatic",
+  },
   ssr: {
     noExternal: ["@tanstack/react-router", "@tanstack/react-query"],
   },

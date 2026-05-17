@@ -1,5 +1,4 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -118,7 +117,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   errorComponent: ErrorComponent,
 });
 
-function RootShell({ children }: { children: React.ReactNode }) {
+function RootShell({ children }: { children: ReactNode }) {
   const { i18n } = useTranslation();
   return (
     <html lang={i18n.language} suppressHydrationWarning>
