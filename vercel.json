@@ -1,9 +1,7 @@
 {
   "framework": "vite",
-  "outputDirectory": "dist/client",
+  "outputDirectory": "dist",
   "rewrites": [
-    { "source": "/assets/(.*)", "destination": "/assets/$1" },
-    { "source": "/favicon.png", "destination": "/favicon.png" },
-    { "source": "/(.*)", "destination": "/api/index" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

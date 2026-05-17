@@ -2,7 +2,6 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Clock, MapPin, Check, ArrowLeft } from "lucide-react";
 import { getTour, tours } from "@/data/tours";
 import { useTranslation } from "react-i18next";
-import i18nInstance from "@/i18n";
 import { ReservationForm } from "@/components/site/ReservationForm";
 
 export const Route = createFileRoute("/tours/$tourId")({
@@ -10,19 +9,6 @@ export const Route = createFileRoute("/tours/$tourId")({
     const tour = getTour(params.tourId);
     if (!tour) throw notFound();
     return { tour };
-  },
-  head: ({ loaderData }) => {
-    const tour = loaderData?.tour;
-    const t = i18nInstance.t.bind(i18nInstance);
-    return {
-      meta: [
-        { title: tour ? `${t(tour.title)} - Derin Mavi` : "Turlar - Derin Mavi" },
-        { name: "description", content: tour ? t(tour.description) : t("meta.tours.desc") },
-        { property: "og:title", content: tour ? t(tour.title) : "Turlar - Derin Mavi" },
-        { property: "og:description", content: tour ? t(tour.description) : t("meta.tours.desc") },
-        { property: "og:image", content: tour?.image },
-      ],
-    };
   },
   notFoundComponent: () => (
     <div className="min-h-[60vh] grid place-items-center px-6 text-center">

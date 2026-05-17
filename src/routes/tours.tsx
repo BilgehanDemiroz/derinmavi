@@ -2,26 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { tours } from "@/data/tours";
 import { TourCard } from "@/components/site/TourCard";
 import { useTranslation } from "react-i18next";
-import i18nInstance from "@/i18n";
 
 export const Route = createFileRoute("/tours")({
-  head: () => {
-    const t = i18nInstance.t.bind(i18nInstance);
-    return {
-      meta: [
-        { title: "Turlar - Derin Mavi" },
-        {
-          name: "description",
-          content: t("meta.tours.desc"),
-        },
-        { property: "og:title", content: "Turlar - Derin Mavi" },
-        {
-          property: "og:description",
-          content: t("meta.tours.desc"),
-        },
-      ],
-    };
-  },
   component: ToursPage,
 });
 
