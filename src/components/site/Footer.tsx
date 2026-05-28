@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Facebook, MapPin, Phone, Mail } from "lucide-react";
+import { Instagram, MapPin, Phone, Mail } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { PortfolioLogo } from "./PortfolioLogo";
 
@@ -15,18 +15,15 @@ export function Footer() {
           </div>
           <p className="text-xs leading-relaxed text-background/60 mb-8">{t("footer.desc")}</p>
           <div className="flex gap-3">
-            <span
+            <a
+              href="https://www.instagram.com/derinmavitur?igsh=czFjd25yNG5objVw"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               className="w-9 h-9 rounded-full border border-background/20 flex items-center justify-center text-background/45 hover:text-gold hover:border-gold transition-colors"
             >
               <Instagram size={14} />
-            </span>
-            <span
-              aria-label="Facebook"
-              className="w-9 h-9 rounded-full border border-background/20 flex items-center justify-center text-background/45 hover:text-gold hover:border-gold transition-colors"
-            >
-              <Facebook size={14} />
-            </span>
+            </a>
           </div>
         </div>
 
