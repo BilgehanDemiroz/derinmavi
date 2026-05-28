@@ -43,39 +43,61 @@ function ContactPage() {
             {
               icon: MessageCircle,
               label: t("contact.info.whatsapp.label"),
-              value: "+90 533 899 01 02",
-              href: "https://wa.me/905338990102",
+              values: [{ text: "+90 533 899 01 02", href: "https://wa.me/905338990102" }],
               note: t("contact.info.whatsapp.note"),
             },
             {
               icon: Phone,
               label: t("contact.info.phone.label"),
-              value: "+90 533 899 01 02",
-              href: "tel:+905338990102",
+              values: [
+                { text: "+90 533 899 01 02", href: "tel:+905338990102" },
+                { text: "+90 532 695 42 43", href: "tel:+905326954243" },
+              ],
             },
             {
               icon: MapPin,
               label: t("contact.info.marina.label"),
-              value: t("contact.info.marina.value"),
+              values: [
+                {
+                  text: t("contact.info.marina.value"),
+                  href: "https://www.google.com/maps/place/Derin+Mavi+Tur+Teknesi/@38.6704853,26.7523259,17z/data=!3m1!4b1!4m6!3m5!1s0x14bbb50125992395:0x16093c4ef893af4d!8m2!3d38.6704853!4d26.7549008!16s%2Fg%2F11zc0mlblq",
+                },
+              ],
             },
             {
               icon: Clock,
               label: t("contact.info.hours.label"),
-              value: t("contact.info.hours.value"),
+              values: [{ text: t("contact.info.hours.value") }],
             },
-          ].map(({ icon: Icon, label, value, href, note }) => (
-            <a key={label} href={href ?? "#"} className="flex gap-5 group">
-              <span className="w-12 h-12 shrink-0 border border-border flex items-center justify-center group-hover:bg-gold group-hover:border-gold transition-colors">
+          ].map(({ icon: Icon, label, values, note }) => (
+            <div key={label} className="flex gap-5">
+              <span className="w-12 h-12 shrink-0 border border-border flex items-center justify-center text-foreground">
                 <Icon size={18} />
               </span>
-              <span>
-                <span className="eyebrow text-muted-foreground block">{label}</span>
-                <span className="font-serif text-xl block group-hover:text-gold transition-colors">
-                  {value}
-                </span>
-                {note && <span className="text-xs text-muted-foreground">{note}</span>}
-              </span>
-            </a>
+              <div className="flex flex-col justify-center">
+                <span className="eyebrow text-muted-foreground block mb-1">{label}</span>
+                <div className="flex flex-col gap-2 font-serif text-xl">
+                  {values.map(({ text, href }) =>
+                    href ? (
+                      <a
+                        key={text}
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-gold transition-colors block"
+                      >
+                        {text}
+                      </a>
+                    ) : (
+                      <span key={text} className="block text-foreground">
+                        {text}
+                      </span>
+                    ),
+                  )}
+                </div>
+                {note && <span className="text-xs text-muted-foreground mt-1.5 block">{note}</span>}
+              </div>
+            </div>
           ))}
         </div>
 
@@ -86,13 +108,25 @@ function ContactPage() {
         </div>
       </section>
 
-      <section className="aspect-[16/8] md:aspect-[21/8] w-full">
+      <section className="relative aspect-[16/8] md:aspect-[21/8] w-full group overflow-hidden">
         <iframe
-          title="Foça Marina Konumu"
-          src="https://www.openstreetmap.org/export/embed.html?bbox=26.74%2C38.66%2C26.78%2C38.69&layer=mapnik&marker=38.6717%2C26.7574"
-          className="w-full h-full border-0"
+          title="Derin Mavi Konumu"
+          src="https://maps.google.com/maps?q=38.6704853,26.7549008+(Derin%20Mavi%20Tur%20Teknesi)&t=&z=17&ie=UTF8&iwloc=&output=embed"
+          className="w-full h-full border-0 transition-all duration-500"
           loading="lazy"
         />
+        {/* Google Haritalar'a yönlendiren şık cam efektli tıklama katmanı */}
+        <a
+          href="https://www.google.com/maps/place/Derin+Mavi+Tur+Teknesi/@38.6704853,26.7523259,17z/data=!3m1!4b1!4m6!3m5!1s0x14bbb50125992395:0x16093c4ef893af4d!8m2!3d38.6704853!4d26.7549008!16s%2Fg%2F11zc0mlblq"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute inset-0 bg-black/0 hover:bg-black/10 flex items-center justify-center transition-all duration-300"
+        >
+          <span className="bg-background/85 backdrop-blur-md text-foreground px-5 py-3 rounded shadow-luxe font-semibold tracking-wider text-[10px] uppercase inline-flex items-center gap-2 border border-foreground/5 scale-90 group-hover:scale-100 opacity-0 group-hover:opacity-100 transition-all duration-300">
+            <MapPin size={13} className="text-gold" />
+            {t("contact.map.open_in_google")}
+          </span>
+        </a>
       </section>
     </>
   );

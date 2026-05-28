@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, MapPin, Phone, Mail } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { PortfolioLogo } from "./PortfolioLogo";
 
 export function Footer() {
   const { t } = useTranslation();
@@ -58,14 +59,33 @@ export function Footer() {
         <div>
           <h4 className="eyebrow text-gold mb-6">{t("footer.contact")}</h4>
           <ul className="text-sm text-background/70 flex flex-col gap-3">
-            <li className="flex gap-2">
-              <MapPin size={14} className="mt-0.5 shrink-0" /> {t("contact.info.marina.value")}
+            <li className="flex gap-2 items-start">
+              <MapPin size={14} className="mt-0.5 shrink-0 text-gold" />
+              <a
+                href="https://www.google.com/maps/place/Derin+Mavi+Tur+Teknesi/@38.6704853,26.7523259,17z/data=!3m1!4b1!4m6!3m5!1s0x14bbb50125992395:0x16093c4ef893af4d!8m2!3d38.6704853!4d26.7549008!16s%2Fg%2F11zc0mlblq"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-background transition-colors hover:underline underline-offset-4"
+              >
+                {t("contact.info.marina.value")}
+              </a>
             </li>
-            <li className="flex gap-2">
-              <Phone size={14} className="mt-0.5 shrink-0" /> +90 533 899 01 02
+            <li className="flex gap-2 items-start">
+              <Phone size={14} className="mt-1 shrink-0 text-gold" />
+              <div className="flex flex-col gap-1">
+                <a href="tel:+905338990102" className="hover:text-background transition-colors">
+                  +90 533 899 01 02
+                </a>
+                <a href="tel:+905326954243" className="hover:text-background transition-colors">
+                  +90 532 695 42 43
+                </a>
+              </div>
             </li>
-            <li className="flex gap-2">
-              <Mail size={14} className="mt-0.5 shrink-0" /> focaderinmavi@gmail.com
+            <li className="flex gap-2 items-center">
+              <Mail size={14} className="shrink-0 text-gold" />
+              <a href="mailto:focaderinmavi@gmail.com" className="hover:text-background transition-colors">
+                focaderinmavi@gmail.com
+              </a>
             </li>
           </ul>
         </div>
@@ -75,6 +95,18 @@ export function Footer() {
         <p>
           © {new Date().getFullYear()} Derin Mavi Tekne Turu. {t("footer.rights")}
         </p>
+
+        {/* Tasarımcı İmzası (Designed by Bilgehan Demiröz) */}
+        <a
+          href="https://portfolio-website-design-kohl.vercel.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 text-background/35 hover:text-gold transition-colors duration-300 group py-1"
+        >
+          <PortfolioLogo className="w-5 h-5 opacity-45 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300" />
+          <span className="font-semibold tracking-[0.2em] text-[8px] sm:text-[9px] transition-colors">{t("footer.designed_by")}</span>
+        </a>
+
         <div className="flex gap-6">
           <span>{t("footer.privacy")}</span>
           <span>{t("footer.terms")}</span>
