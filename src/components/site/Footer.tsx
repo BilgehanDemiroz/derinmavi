@@ -98,10 +98,10 @@ export function Footer() {
           href="https://portfolio-website-design-kohl.vercel.app"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 text-background/35 hover:text-gold transition-colors duration-300 group py-1"
+          className="flex items-center gap-2.5 text-background/85 sm:text-background/35 hover:text-gold transition-colors duration-300 group py-1.5"
         >
-          <PortfolioLogo className="w-5 h-5 opacity-45 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300" />
-          <span className="font-semibold tracking-[0.2em] text-[8px] sm:text-[9px] transition-colors">{t("footer.designed_by")}</span>
+          <PortfolioLogo className="w-6 h-6 sm:w-5 sm:h-5 opacity-90 sm:opacity-45 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300" />
+          <span className="font-semibold tracking-[0.2em] text-[10px] sm:text-[9px] transition-colors">{t("footer.designed_by")}</span>
         </a>
 
         <div className="flex gap-6">
